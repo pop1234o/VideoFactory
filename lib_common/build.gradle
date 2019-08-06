@@ -34,7 +34,10 @@ dependencies {
     api deps.support.appcompat
     api deps.support.design
     api deps.support.vector
+    api deps.support.support_v4
 
+    api deps.arouter_api
+    api deps.arouter_compiler
 
     api deps.constraint_layout
 }
