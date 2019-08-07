@@ -1,7 +1,8 @@
-package com.liyafeng.module_mine
+package com.liyafeng.module_mine.ui.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.liyafeng.module_mine.R
 
 class AboutActivity : AppCompatActivity() {
 

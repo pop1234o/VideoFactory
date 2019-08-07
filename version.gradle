@@ -35,7 +35,7 @@ innerDeps.arouter_api = "com.alibaba:arouter-api:1.3.1"
 innerDeps.arouter_compiler = "com.alibaba:arouter-compiler:1.1.4"
 
 //fresco
-innerDeps.fresco = "com.facebook.fresco:fresco:2.0.0"
+innerDeps.fresco = "com.facebook.fresco:fresco:1.9.0"
 
 //========其他
 innerDeps.constraint_layout = "com.android.support.constraint:constraint-layout:1.1.3"
