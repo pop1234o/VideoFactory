@@ -6,6 +6,8 @@ import com.liyafeng.lib_common.AppUtil
 
 //open 可继承，默认不可继承
 open class BaseApplication : Application() {
+
+
     override fun onCreate() {
         super.onCreate()
 

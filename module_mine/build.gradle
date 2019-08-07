@@ -6,23 +6,20 @@ if (isModule.toBoolean()) {
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
 android {
     compileSdkVersion build_versions.target_sdk
     buildToolsVersion build_versions.build_tools
 
-
     defaultConfig {
         if (isModule.toBoolean()) {
-            applicationId "com.liyafeng.module_convert"
+            applicationId "com.liyafeng.module_mine"
         }
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode project.versionCode as int
         versionName project.versionName
 
-        //限定资源前缀resourcePrefix
-        resourcePrefix "convert_"
+        resourcePrefix "mine_"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -40,24 +37,9 @@ android {
         }
     }
 
-    sourceSets {
-        main {
-            if (isModule.toBoolean()) {
-                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-            } else {
-                manifest.srcFile 'src/main/release/AndroidManifest.xml'
-                java {
-                    exclude 'debug/**'
-                }
-            }
-        }
-
-    }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(":lib_common")
-
 }
