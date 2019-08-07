@@ -2,6 +2,7 @@ package com.liyafeng.lib_common.base
 
 import android.app.Application
 import com.alibaba.android.arouter.launcher.ARouter
+import com.facebook.drawee.backends.pipeline.Fresco
 import com.liyafeng.lib_common.AppUtil
 
 //open 可继承，默认不可继承
@@ -17,5 +18,7 @@ open class BaseApplication : Application() {
         }
         ARouter.init(this)
 
+        //Fresco init
+        Fresco.initialize(this);
     }
 }
