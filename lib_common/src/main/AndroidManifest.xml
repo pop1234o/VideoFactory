@@ -7,9 +7,5 @@
 
 
     <application>
-        <!--<activity-->
-                <!--android:name="com.tal.lib_common.ui.activity.WebActivity"-->
-                <!--android:launchMode="singleTop"-->
-                <!--android:screenOrientation="portrait" />-->
     </application>
 </manifest>

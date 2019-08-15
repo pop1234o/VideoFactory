@@ -1,57 +1,40 @@
 package com.liyafeng.module_convert.ui
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import com.liyafeng.lib_common.base.BaseFragment
+import com.liyafeng.lib_common.utils.AppUtil
 import com.liyafeng.module_convert.R
+import kotlinx.android.synthetic.main.convert_fragment_main.*
 
 
 // TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+val ARG_1 = "1"
+const val ARG_2 = "2"
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [MainConvertFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [MainConvertFragment.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
-class MainConvertFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-//    private var param1: String? = null
-//    private var param2: String? = null
+private val ARG_3 = "3"
+private const val ARG_4 = "4"
+
+
+class MainConvertFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        arguments?.let {
-////            param1 = it.getString(ARG_PARAM1)
-////            param2 = it.getString(ARG_PARAM2)
+    }
+
+
+    override fun getLayoutId() = R.layout.convert_fragment_main
+
+
+    override fun initData(view: View) {
+
+//        btnDialog.setOnClickListener {
+//
+//            showFloatLoading()
+//            AppUtil.mainHandler.postDelayed({
+//                hideFloatLoading()
+//            }, 5000);
 //        }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_convert, container, false)
-    }
-
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-    }
-
-    override fun onDetach() {
-        super.onDetach()
     }
 
 
@@ -66,7 +49,7 @@ class MainConvertFragment : Fragment() {
         @JvmStatic
         fun newInstance() =
             MainConvertFragment().apply {
-//                arguments = Bundle().apply {
+                //                arguments = Bundle().apply {
 //                    putString(ARG_PARAM1, param1)
 //                    putString(ARG_PARAM2, param2)
 //                }

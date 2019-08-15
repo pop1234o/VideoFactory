@@ -64,4 +64,5 @@ dependencies {
 //    compile 'com.facebook.fresco:webpsupport:0.12.0'
 
     api deps.constraint_layout
+    api project(path: ':lib_loading')
 }
