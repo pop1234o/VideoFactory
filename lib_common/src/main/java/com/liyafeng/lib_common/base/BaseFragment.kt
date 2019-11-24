@@ -6,10 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.liyafeng.lib_common.view.BaseView
+import com.tbruyelle.rxpermissions2.RxPermissions
 
 abstract class BaseFragment : Fragment(), BaseView, View.OnClickListener {
     private var lastClickTime: Long = 0
     val MIN_CLICK_DELAY_TIME = 800
+
+    //懒加载，只能是val
+    private val mPermission: RxPermissions by lazy {
+        RxPermissions(this)
+    }
+
+    open fun getPermission(): RxPermissions {
+        return mPermission
+    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -72,7 +83,7 @@ abstract class BaseFragment : Fragment(), BaseView, View.OnClickListener {
         }
     }
 
-    protected fun onNoDoubleClick(v: View) {
+    protected open fun onNoDoubleClick(v: View) {
 
     }
 }

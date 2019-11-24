@@ -59,5 +59,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(":lib_common")
+    implementation project(":lib_compress")
 
+    implementation 'com.bilibili:boxing:1.0.4'
+    implementation 'com.bilibili:boxing-impl:1.0.4'
 }

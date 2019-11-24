@@ -1,1 +1,1 @@
-include ':app', ':lib_common', ':module_compress', ':module_mine', ':lib_loading'
+include ':app', ':lib_common', ':module_compress', ':module_mine', ':lib_loading', ':lib_compress'

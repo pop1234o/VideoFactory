@@ -37,6 +37,7 @@ dependencies {
 
     api deps.kotlin.stdlib
 
+    api deps.support.annotations
     api deps.support.appcompat
     api deps.support.design
     api deps.support.vector
@@ -48,7 +49,12 @@ dependencies {
 
     //fresco
     api deps.fresco
+    api deps.fresco_gif
 
+    api 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+    api deps.rxjava2
+    api deps.rx_android
 
 //    // 在 API < 14 上的机器支持 WebP 时，需要添加
 //    compile 'com.facebook.fresco:animated-base-support:0.12.0'

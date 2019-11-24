@@ -5,6 +5,8 @@ import android.app.Application
 import com.alibaba.android.arouter.launcher.ARouter
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.liyafeng.lib_common.AppUtil
+import com.liyafeng.lib_common.utils.ClassUtils
+import com.liyafeng.lib_common.utils.IApplicationDelegate
 import java.util.*
 
 //open 可继承，默认不可继承
@@ -37,6 +39,16 @@ open class BaseApplication : Application() {
         //Fresco init
         Fresco.initialize(this)
 
+        //子模块初始化
+        val delegateList: List<IApplicationDelegate> =
+            ClassUtils.getObjectsWithInterface(
+                this,
+                IApplicationDelegate::class.java,
+                "com.liyafeng"
+            )
+        for (delegate in delegateList) {
+            delegate.onCreate(this)
+        }
     }
 
 
